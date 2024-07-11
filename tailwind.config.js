@@ -4,6 +4,7 @@ export default {
   theme: {
     colors: {
       neutral: {
+        alpha: "#FBF4F90D",
         50: "#FBF4F9",
         100: "#F8EDF5",
         200: "#EFD7E9",
@@ -44,7 +45,11 @@ export default {
       },
       orange: "#FF680A",
     },
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        "gradient-primary": `linear-gradient(to right, ${theme("colors.pink")}, ${theme("colors.purple")})`
+      })
+    },
   },
   plugins: [],
 };
